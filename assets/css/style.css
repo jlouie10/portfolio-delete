@@ -6,6 +6,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     margin-bottom: 60px;
+    color: #333;
 }
 
 .navbar, .footer-nav {
@@ -21,14 +22,64 @@ body {
     max-width: 960px;
 }
 
+#intro, #portfolio {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+#intro h1 {
+    font-size: 4rem;
+    color: #111;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+#intro h2 {
+    font-size: 1rem;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 1.25rem;
+}
+
+#portfolio .col-12 {
+    margin-bottom: 2.5rem;
+}
+
+#portfolio h3 {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+
+#portfolio p {
+    color: #888;
+}
+
 .portfolio-image {
     display: block;
     overflow: visible;
     height: 260px;
     width: 100%;
     border-radius: 16px;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     background-size: auto 260px;
+    transition: transform 200ms ease 0s;
+    transform: scaleX(1) scaleY(1);
+}
+
+.portfolio-img {
+    display: block;
+    overflow: visible;
+    border-radius: 16px;
+    transition: transform 200ms ease 0s;
+    transform: scaleX(1) scaleY(1);
+}
+
+.portfolio-image:hover, .portfolio-image:active, .portfolio-image:focus {
+    transition: transform 200ms ease 0s;
+    transform: scaleX(1.05) scaleY(1.05);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .16);
 }
 
 .footer {
